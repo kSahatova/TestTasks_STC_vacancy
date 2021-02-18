@@ -27,10 +27,10 @@ chord = karplus_strong(f0, fs, duration);
 chord16 = int16(chord);
 
 % New file generation with the recieved result  
-% fileID = fopen('output.txt', 'w');
-% fprintf(fileID, 'Synthesized set of frequencies\n');
-% fprintf(fileID, '%0.6f \n', chord);
-% fclose(fileID);
+fileID = fopen('output.txt', 'w');
+fprintf(fileID, 'Synthesized set of frequencies\n');
+fprintf(fileID, '%0.6f \n', chord);
+fclose(fileID);
 
 % Normalize the sound for audioplayer
 chord = chord - mean(chord);
